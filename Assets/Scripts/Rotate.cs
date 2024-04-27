@@ -7,6 +7,7 @@ public class Rotate : MonoBehaviour {
     public Character c;
     public float rotationSpeed = 150;
     public float pushPower = 5.0f;
+    public Vector3 horizontalRotation;
 
     // Start is called before the first frame update
     void Start() {
@@ -15,16 +16,23 @@ public class Rotate : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         // Rotate car sides
-        Vector3 horizontalRotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotationSpeed * Time.deltaTime, 0);
+        horizontalRotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotationSpeed * Time.deltaTime, 0);
         transform.Rotate(horizontalRotation);
         c.forward = transform.forward;
     }
 
     private void OnTriggerEnter(Collider other) {
         Rigidbody body = other.attachedRigidbody;
+        //Debug.Log(other.gameObject.tag);
+        //Debug.Log(body.gameObject.tag);
 
-        Debug.Log("Colision start");
-
+        //Debug.Log("Colision start");
+        if (other.gameObject.CompareTag("PressurePlate")) {
+            //Debug.Log("PressurePlate ");
+            PressurePlate pressurePlate = body.GetComponent<PressurePlate>();
+            pressurePlate.Activate();
+            return;
+        }
         if (body == null || body.isKinematic) {
             return;
         }
@@ -46,4 +54,11 @@ public class Rotate : MonoBehaviour {
 
     }
 
-}
+
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject.CompareTag("PressurePlate")) {
+            PressurePlate pressurePlate = other.gameObject.GetComponent<PressurePlate>();
+            pressurePlate.Deactivate();
+        }
+    }
+ }
