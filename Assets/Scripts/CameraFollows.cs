@@ -14,7 +14,5 @@ public class CameraFollows : MonoBehaviour {
 
     void Update() {
         this.transform.position = objectToFollow.position + offset;
-        //transform.LookAt(objectToFollow.forward * -1);
-        //transform.Rotate(rotateFollower.horizontalRotation + offset);
     }
 }

@@ -3,19 +3,17 @@ using UnityEngine;
 public class ArmadilhaExplosao : MonoBehaviour, PressurePlateActivate {
     public float jumpExplosion = 1f;
     public float radius = 5f;
-    public float forcaEmpurrar = 500f;
+    public float pushForce = 500f;
     public bool active = false;
 
-    public void Empurrar() {
+    public void Explosion() {
         Vector3 posicaoExplosao = transform.position;
         Collider[] colliders = Physics.OverlapSphere(posicaoExplosao, radius);
-        int i = 0;
         foreach (Collider hit in colliders) {
-            Debug.Log(i);
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
             if (rb != null) {
-                rb.AddExplosionForce(forcaEmpurrar, posicaoExplosao, radius, jumpExplosion);
+                rb.AddExplosionForce(pushForce, posicaoExplosao, radius, jumpExplosion);
             }
         }
     }
@@ -23,7 +21,7 @@ public class ArmadilhaExplosao : MonoBehaviour, PressurePlateActivate {
     public void Activate() {
         if (active) { return; }
         active = true;
-        Empurrar();
+        Explosion();
     }
 
     public void Deactivate() {

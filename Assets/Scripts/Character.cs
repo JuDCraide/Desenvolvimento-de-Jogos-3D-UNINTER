@@ -10,7 +10,7 @@ public class Character : MonoBehaviour {
     public float gravidade = 9.81f;
 
     public Vector3 forward = Vector3.zero;
-    
+
     public LayerMask groundLayer;
     public AnimationCurve curve;
     public float time = 0.25f;
@@ -28,11 +28,9 @@ public class Character : MonoBehaviour {
         // Rotate car slope
         Ray ray = new Ray(controller.transform.position, -controller.transform.up);
         RaycastHit hit = new RaycastHit();
-        if(Physics.Raycast(ray, out hit,  groundLayer)) {
+        if (Physics.Raycast(ray, out hit, groundLayer)) {
             Quaternion rotationXZ = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, hit.normal), curve.Evaluate(time));
             controller.transform.rotation = Quaternion.Euler(rotationXZ.eulerAngles.x, controller.transform.eulerAngles.y, rotationXZ.eulerAngles.z);
         }
-
-
     }
 }
