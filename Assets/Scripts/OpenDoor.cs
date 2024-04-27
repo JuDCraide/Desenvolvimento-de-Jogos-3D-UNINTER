@@ -34,7 +34,7 @@ public class OpenDoor : MonoBehaviour, PressurePlateActivate
         active = true;
         Rigidbody.isKinematic = false;
         Door.useMotor = true;
-        motor.targetVelocity *= -1;
+        //motor.targetVelocity *= -1;
         Door.motor = motor;
     }
 
