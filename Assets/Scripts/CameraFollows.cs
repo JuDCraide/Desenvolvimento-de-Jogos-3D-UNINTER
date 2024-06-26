@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollows : MonoBehaviour {
 
     public Transform objectToFollow;
-    public Rotate rotateFollower;
+    //public Rotate rotateFollower;
     public Vector3 offset;
 
     void Start() {

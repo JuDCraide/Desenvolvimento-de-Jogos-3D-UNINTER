@@ -25,4 +25,13 @@ public class PressurePlate : MonoBehaviour, PressurePlateActivate {
             activationObject.Deactivate();
         }
     }
+
+    private void OnCollisionEnter(Collision collision) {
+        Activate();
+    }
+
+
+    private void OnCollisionExit(Collision collision) {
+        Deactivate();
+    }
 }
