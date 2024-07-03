@@ -66,7 +66,7 @@ public class CarController : MonoBehaviour {
     void Break() {
         if (Input.GetKey(KeyCode.Space)) {
             foreach (Wheel wheel in wheels) {
-                wheel.collider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
+                wheel.collider.brakeTorque = 600 * brakeAcceleration * Time.deltaTime;
             }
         }
         else {
