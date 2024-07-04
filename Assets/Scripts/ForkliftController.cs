@@ -24,17 +24,23 @@ public class CarController : MonoBehaviour {
 
     float verticalInput;
     float horizontalInput;
+    bool breakInput;
+
+    float speed;
 
     public List<Wheel> wheels;
     public Rigidbody rb;
 
+    public Animator animator;
+
     void Start() {
         rb = GetComponent<Rigidbody>();
+        animator.SetBool("IsMovingForward", false);
+        animator.SetBool("IsMovingBackwards", false);
     }
 
     void Update() {
         GetInputs();
-        // AnimateWheels();
     }
 
     void LateUpdate() {
@@ -43,9 +49,15 @@ public class CarController : MonoBehaviour {
         Break();
     }
 
+    private void FixedUpdate() {
+        AnimateMoveForward();
+        AnimateTurn();
+    }
+
     void GetInputs() {
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
+        breakInput = Input.GetKey(KeyCode.Space);
     }
 
     void Move() {
@@ -76,13 +88,36 @@ public class CarController : MonoBehaviour {
         }
     }
 
-    //void AnimateWheels() {
-    //    foreach (Wheel wheel in wheels) {
-    //        Quaternion rot;
-    //        Vector3 pos;
-    //        wheel.collider.GetWorldPose(out pos, out rot);
-    //        wheel.gameObject.transform.position = pos;
-    //        wheel.gameObject.transform.rotation = rot;
-    //    }
-    //}
+    void AnimateMoveForward() {
+        speed = transform.InverseTransformDirection(rb.velocity).z;
+        //Debug.Log($"{speed} {Mathf.Abs(speed) < 0.1f} {breakInput}");
+        if (Mathf.Abs(speed) < 1f || breakInput) {
+            animator.SetBool("IsMovingForward", false);
+            animator.SetBool("IsMovingBackwards", false);
+        }
+        else if (speed > 0f) {
+            animator.SetBool("IsMovingForward", true);
+            animator.SetBool("IsMovingBackwards", false);
+        }
+        else if (speed < 0f) {
+            animator.SetBool("IsMovingForward", false);
+            animator.SetBool("IsMovingBackwards", true);
+        }
+    }
+
+    void AnimateTurn() {
+        //Debug.Log($"{horizontalInput} {Mathf.Approximately(horizontalInput, 0f)}");
+        if (Mathf.Approximately(horizontalInput, 0f)) {
+            animator.SetBool("IsTurningLeft", false);
+            animator.SetBool("IsTurningRight", false);
+        }
+        else if (horizontalInput < 0f) {
+            animator.SetBool("IsTurningLeft", true);
+            animator.SetBool("IsTurningRight", false);
+        }
+        else if (horizontalInput > 0f) {
+            animator.SetBool("IsTurningLeft", false);
+            animator.SetBool("IsTurningRight", true);
+        }
+    }
 }
