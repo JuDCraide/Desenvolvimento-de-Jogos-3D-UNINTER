@@ -6,35 +6,34 @@ public class PickupController : MonoBehaviour {
 
     [SerializeField]
     Transform holdArea;
+    [SerializeField]
+    Transform dropPosition;
     private GameObject heldObj = null;
     private Rigidbody heldObjRB;
 
     [SerializeField]
     private float pickupRange = 5.0f;
     [SerializeField]
-    private float pickupForce = 1000.0f;
+    private float pickupForce = 150.0f;
 
     void Start() {
-
     }
 
     void Update() {
-        Debug.Log("UPDATE");
         if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("MouseDown");
             if (heldObj == null) {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                //bool rayDidHit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange);
                 bool rayDidHit = Physics.Raycast(ray, out hit);
-                Debug.Log(rayDidHit);
-                if (rayDidHit) {
+                float distance = Vector3.Distance(transform.position, hit.point);
+                Debug.Log(distance);
+                if (rayDidHit && distance <= pickupRange) {
                     PickupObject(hit.transform.gameObject);
                 }
             }
-            else {
-                DropObject();
-            }
+        }
+        if (Input.GetMouseButtonDown(1)) {
+            DropObject();
         }
         if (heldObj != null) {
             MoveObject();
@@ -42,11 +41,17 @@ public class PickupController : MonoBehaviour {
     }
 
     void PickupObject(GameObject pickObj) {
+        if (pickObj.tag == "Player") {
+            return;
+        }
         if (pickObj.GetComponent<Rigidbody>()) {
             heldObjRB = pickObj.GetComponent<Rigidbody>();
+            heldObjRB.transform.rotation = Quaternion.identity;
+            heldObjRB.transform.forward = transform.forward;
+            heldObjRB.transform.position = holdArea.transform.position;
             heldObjRB.useGravity = false;
             heldObjRB.drag = 10;
-            heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
+            heldObjRB.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ; ;
 
             heldObjRB.transform.parent = holdArea;
             heldObj = pickObj;
@@ -59,8 +64,9 @@ public class PickupController : MonoBehaviour {
         heldObjRB.constraints = RigidbodyConstraints.None;
 
         heldObjRB.transform.parent = null;
+        heldObj.transform.position = dropPosition.transform.position;
         heldObj = null;
-        
+
     }
 
     void MoveObject() {
