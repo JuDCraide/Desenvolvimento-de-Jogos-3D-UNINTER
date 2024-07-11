@@ -20,8 +20,9 @@ public class PickupController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            if (heldObj == null) {
+        if (heldObj == null) {
+            if (Input.GetMouseButtonDown(0)) {
+
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 bool rayDidHit = Physics.Raycast(ray, out hit);
@@ -32,11 +33,13 @@ public class PickupController : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetMouseButtonDown(1)) {
-            DropObject();
-        }
-        if (heldObj != null) {
-            MoveObject();
+        else {
+            if (Input.GetMouseButtonDown(1)) {
+                DropObject();
+            }
+            else {
+                MoveObject();
+            }
         }
     }
 
