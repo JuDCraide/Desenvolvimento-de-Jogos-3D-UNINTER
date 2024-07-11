@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 1509377786217879877}
   - component: {fileID: 5498496748821974705}
   - component: {fileID: 2952346216994693825}
+  - component: {fileID: 3666860984100235303}
   m_Layer: 0
   m_Name: CharacterForklift
   m_TagString: Untagged
@@ -533,6 +534,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3666860984100235303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322798565977117159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f69fe082f34f448a9c72c1f4dabb55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdArea: {fileID: 661513197119868754}
+  pickupRange: 5
+  pickupForce: 150
 --- !u!1 &6206939699759092140
 GameObject:
   m_ObjectHideFlags: 0
