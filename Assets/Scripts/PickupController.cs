@@ -10,6 +10,7 @@ public class PickupController : MonoBehaviour {
     Transform dropPosition;
     private GameObject heldObj = null;
     private Rigidbody heldObjRB;
+    public LayerMask m_LayerMask;
 
     [SerializeField]
     private float pickupRange = 5.0f;
@@ -24,7 +25,7 @@ public class PickupController : MonoBehaviour {
             if (Input.GetMouseButtonDown(0)) {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                bool rayDidHit = Physics.Raycast(ray, out hit);
+                bool rayDidHit = Physics.Raycast(ray, out hit, m_LayerMask);
                 float distance = Vector3.Distance(transform.position, hit.point);
                 //Debug.Log(distance);
                 if (rayDidHit && distance <= pickupRange) {

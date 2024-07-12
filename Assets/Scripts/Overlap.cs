@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 public class Overlap : MonoBehaviour {
     bool m_Started;
-    public LayerMask m_LayerMask;    
+    public LayerMask m_LayerMask;
     public int containObjectsQuantity;
     public PickableObject pickableObject;
     public Image uiImage;
