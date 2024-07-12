@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public enum PickableObjectType {
     Tire,
@@ -10,9 +7,9 @@ public enum PickableObjectType {
     Barrel,
 }
 
-public class PickableObject : MonoBehaviour
-{
+public class PickableObject : MonoBehaviour {
     [SerializeField]
     public PickableObjectType type;
     public int points = 100;
+    public Sprite objectImage;
 }

@@ -22,12 +22,11 @@ public class PickupController : MonoBehaviour {
     void Update() {
         if (heldObj == null) {
             if (Input.GetMouseButtonDown(0)) {
-
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 bool rayDidHit = Physics.Raycast(ray, out hit);
                 float distance = Vector3.Distance(transform.position, hit.point);
-                Debug.Log(distance);
+                //Debug.Log(distance);
                 if (rayDidHit && distance <= pickupRange) {
                     PickupObject(hit.transform.gameObject);
                 }

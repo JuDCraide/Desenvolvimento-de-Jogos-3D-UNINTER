@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Attach this script to your GameObject. This GameObject doesn’t need to have a Collider component
 //Set the Layer Mask field in the Inspector to the layer you would like to see collisions in (set to Everything if you are unsure).
@@ -12,15 +10,19 @@ using UnityEngine;
 
 //This script uses the OverlapBox that creates an invisible Box Collider that detects multiple collisions with other colliders. The OverlapBox in this case is the same size and position as the GameObject you attach it to (acting as a replacement for the BoxCollider component).
 
-public class OverlapBoxExample : MonoBehaviour {
+public class Overlap : MonoBehaviour {
     bool m_Started;
     public LayerMask m_LayerMask;    
     public int containObjectsQuantity;
-    public PickableObjectType objectType;
+    public PickableObject pickableObject;
+    public Image uiImage;
+    public TMPro.TextMeshProUGUI quantityTest;
 
     void Start() {
         //Use this to ensure that the Gizmos are being drawn when in Play Mode.
         m_Started = true;
+        uiImage.sprite = pickableObject.objectImage;
+        uiImage.color = Color.white;
     }
 
     void FixedUpdate() {
@@ -37,13 +39,13 @@ public class OverlapBoxExample : MonoBehaviour {
         foreach (Collider c in hitColliders) {
             //Output all of the collider names
             var pickable = c.GetComponent<PickableObject>();
-            if (pickable && pickable.type == objectType) {
-                Debug.Log("Hit : " + c.name);
+            if (pickable && pickable.type == pickableObject.type) {
+                //Debug.Log("Hit : " + c.name);
                 quantity++;
             }
         }
         containObjectsQuantity = quantity;
-        Debug.Log(containObjectsQuantity);
+        quantityTest.SetText(containObjectsQuantity.ToString());
     }
 
     //Draw the Box Overlap as a gizmo to show where it currently is testing. Click the Gizmos button to see this
