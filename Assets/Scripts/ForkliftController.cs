@@ -67,6 +67,9 @@ public class CarController : MonoBehaviour {
     }
 
     void Move() {
+        if (Mathf.Approximately(verticalInput, 0)) {
+            verticalInput = 0;
+        }
         foreach (Wheel wheel in wheels) {
             wheel.collider.motorTorque = verticalInput * 600 * maxAcceleration;// * Time.deltaTime;
         }

@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 4354434756809613924}
   - component: {fileID: 1984671396886779566}
   - component: {fileID: 3738026279516879743}
-  - component: {fileID: 4078977004049831906}
-  - component: {fileID: 9097364643620520717}
   m_Layer: 0
   m_Name: Forklift
   m_TagString: Player
@@ -115,48 +113,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7656348851005705370, guid: d14042fb86936a94197f2e8cda269c65, type: 3}
---- !u!65 &4078977004049831906
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38848421339019131}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 4.5, y: 6.33169, z: 8.428536}
-  m_Center: {x: 0, y: 4.2316523, z: -2.1979005}
---- !u!65 &9097364643620520717
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38848421339019131}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 7.334956, y: 0.8420487, z: 14.925006}
-  m_Center: {x: -0.01234889, y: 0.85892755, z: 0.88548815}
 --- !u!1 &1721026479935591592
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +520,7 @@ Rigidbody:
   m_GameObject: {fileID: 5322798565977117159}
   serializedVersion: 4
   m_Mass: 550
-  m_Drag: 0.75
+  m_Drag: 0.5
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -651,7 +607,7 @@ MonoBehaviour:
   dropPosition: {fileID: 7008844134274188457}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   pickupRange: 5
   pickupForce: 150
 --- !u!65 &3600751629446199937
@@ -694,8 +650,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.334956, y: 0.8420487, z: 14.925006}
-  m_Center: {x: -0.01234889, y: 0.85892755, z: 0.88548815}
+  m_Size: {x: 7.334956, y: 0.8420487, z: 15.2110195}
+  m_Center: {x: -0.01234889, y: 1.658927, z: 1.0284948}
 --- !u!1 &6206939699759092140
 GameObject:
   m_ObjectHideFlags: 0
