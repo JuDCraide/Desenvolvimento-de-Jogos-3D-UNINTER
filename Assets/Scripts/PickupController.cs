@@ -61,23 +61,34 @@ public class PickupController : MonoBehaviour {
         }
     }
 
-    
+
     void DropObject() {
-        heldObjRB.useGravity = true;        
+        heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;
-        
+
         heldObjRB.transform.parent = null;
         heldObj.transform.position = dropPosition.transform.position;
-        Debug.Log("DropObject " + heldObj.name);
         heldObj = null;
-        //Debug.Log("DropObject " + heldObj.name);
+    }
+
+    public float RandomBoolValue() {
+        var i = Random.Range(-10, 11);
+        return i/10.0f;
     }
 
     public void DropObjectOnImpact() {
         //Debug.Log("DropObjectOnImpact");
         if (heldObj != null) {
-            DropObject();
+            heldObjRB.useGravity = true;
+            heldObjRB.drag = 1;
+            heldObjRB.constraints = RigidbodyConstraints.None;
+
+            heldObjRB.transform.parent = null;
+            heldObjRB.AddForce(transform.up * 600);
+            Debug.Log(RandomBoolValue());
+            heldObjRB.AddTorque(heldObj.transform.forward * 3000 * RandomBoolValue());
+            heldObj = null;
         }
     }
 

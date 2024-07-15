@@ -15,14 +15,9 @@ public class Explosion : MonoBehaviour, PressurePlateActivate {
             if (rb != null) {
                 rb.AddExplosionForce(pushForce, posicaoExplosao, radius, jumpExplosion);
             }
-            if(hit.tag == "Player") {
-                Debug.Log("Player " + hit.gameObject.name);
-                var pick = hit.GetComponent<PickupController>();
-                if(pick != null) {
-                    Debug.Log("Player pickup" );
-                    pick.DropObjectOnImpact();
-                }
-                
+            if (hit.tag == "Player") {
+                //Debug.Log("Player " + hit.gameObject.name);
+                hit.GetComponent<PickupController>().DropObjectOnImpact();
             }
         }
         active = false;

@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
             seconds += 59;
         }
         if (minutes <= 0 && seconds <= 0) {
+            minutes = 0;
+            seconds = 0;
             EndLevel();
         }
         TimeText.SetText(minutes.ToString("00") + ":" + seconds.ToString("00"));
