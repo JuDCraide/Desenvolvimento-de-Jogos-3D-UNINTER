@@ -656,7 +656,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354155029}
-  m_LocalRotation: {x: -0, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1329,7 +1329,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595280936}
-  m_Material: {fileID: 13400000, guid: 6e58abe5c8a5a1e44b3431fcb9b2d5b9, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1892,7 +1892,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.15082026, y: -1e-45, z: 0, w: 0.9885612}
+  m_LocalRotation: {x: 0.15082026, y: 0, z: 0, w: 0.9885612}
   m_LocalPosition: {x: 0, y: 3.64, z: -21.439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3538,16 +3538,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 30
-  minutes: 0
+  minutes: 2
   TimeText: {fileID: 506179403}
   barrels: {fileID: 1241366568}
   boxes1: {fileID: 1902691377}
   boxes2: {fileID: 283590674}
   tires: {fileID: 472687027}
-  barrelsCount: 0
-  boxes1Count: 0
-  boxes2Count: 0
-  tiresCount: 0
 --- !u!1001 &1858997961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3826,10 +3822,10 @@ RectTransform:
   m_Father: {fileID: 1760196144}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -516, y: 328}
-  m_SizeDelta: {x: -1030, y: -654}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 124, y: -39}
+  m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041528089
 MonoBehaviour:
