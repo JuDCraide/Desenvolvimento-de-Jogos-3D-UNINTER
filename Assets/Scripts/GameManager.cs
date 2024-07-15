@@ -15,11 +15,6 @@ public class GameManager : MonoBehaviour {
     public Overlap boxes2;
     public Overlap tires;
 
-    public int barrelsCount;
-    public int boxes1Count;
-    public int boxes2Count;
-    public int tiresCount;
-
     private void Awake() {
         if (instance != null && instance != this) {
             Destroy(this);
@@ -34,6 +29,11 @@ public class GameManager : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        StaticResults.barrelsCount = barrels.containObjectsQuantity;
+        StaticResults.boxes1Count = boxes1.containObjectsQuantity;
+        StaticResults.boxes2Count = boxes2.containObjectsQuantity;
+        StaticResults.tiresCount = tires.containObjectsQuantity;
+
         seconds -= Time.deltaTime;
         if (minutes <= 0 && seconds <= 0) {
             EndLevel();
@@ -43,11 +43,6 @@ public class GameManager : MonoBehaviour {
             seconds += 59;
         }
         TimeText.SetText(minutes.ToString("00") + ":" + seconds.ToString("00"));
-
-        barrelsCount = barrels.containObjectsQuantity;
-        boxes1Count = boxes1.containObjectsQuantity;
-        boxes2Count = boxes2.containObjectsQuantity;
-        tiresCount = tires.containObjectsQuantity;
     }
 
     public void EndLevel() {
