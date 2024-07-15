@@ -33,10 +33,13 @@ public class CarController : MonoBehaviour {
 
     public Animator animator;
 
+    public Transform centerOfMass;
+
     void Start() {
         rb = GetComponent<Rigidbody>();
         animator.SetBool("IsMovingForward", false);
         animator.SetBool("IsMovingBackwards", false);
+        rb.centerOfMass = centerOfMass.localPosition;
     }
 
     void Update() {
@@ -50,6 +53,9 @@ public class CarController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        //Move();
+        //Steer();
+        //Break();
         AnimateMoveForward();
         AnimateTurn();
     }
@@ -62,7 +68,7 @@ public class CarController : MonoBehaviour {
 
     void Move() {
         foreach (Wheel wheel in wheels) {
-            wheel.collider.motorTorque = verticalInput * 600 * maxAcceleration * Time.deltaTime;
+            wheel.collider.motorTorque = verticalInput * 600 * maxAcceleration;// * Time.deltaTime;
         }
     }
 
@@ -78,7 +84,7 @@ public class CarController : MonoBehaviour {
     void Break() {
         if (Input.GetKey(KeyCode.Space)) {
             foreach (Wheel wheel in wheels) {
-                wheel.collider.brakeTorque = 600 * brakeAcceleration * Time.deltaTime;
+                wheel.collider.brakeTorque = 600 * brakeAcceleration;// * Time.deltaTime;
             }
         }
         else {
