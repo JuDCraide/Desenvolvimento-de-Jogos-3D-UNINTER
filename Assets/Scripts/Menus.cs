@@ -7,6 +7,7 @@ public class Menus : MonoBehaviour {
     }
 
     public void ChangeScene(string sceneName) {
+        //Debug.Log(sceneName);
         SceneManager.LoadScene(sceneName);
     }
 
