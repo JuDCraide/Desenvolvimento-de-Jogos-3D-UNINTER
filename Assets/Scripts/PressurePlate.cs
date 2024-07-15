@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,9 +13,12 @@ public class PressurePlate : MonoBehaviour, PressurePlateActivate {
     [SerializeField]
     public GameObject go;
     PressurePlateActivate activationObject;
-    // Start is called before the first frame update
-    public void Activate() {
+
+    private void Start() {
         activationObject = go.GetComponent<PressurePlateActivate>();
+    }
+
+    public void Activate() {        
         if (activationObject != null) {
             activationObject.Activate();
         }
@@ -26,12 +30,13 @@ public class PressurePlate : MonoBehaviour, PressurePlateActivate {
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log("Activate trigg");
         Activate();
     }
 
-
-    private void OnCollisionExit(Collision collision) {
+    private void OnTriggerExit(Collider other) {
         Deactivate();
     }
+
 }

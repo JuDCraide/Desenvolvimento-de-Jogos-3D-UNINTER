@@ -16,9 +16,11 @@ public class Explosion : MonoBehaviour, PressurePlateActivate {
                 rb.AddExplosionForce(pushForce, posicaoExplosao, radius, jumpExplosion);
             }
         }
+        active = false;
     }
 
     public void Activate() {
+        Debug.Log("Activate");
         if (active) { return; }
         active = true;
         Explode();
