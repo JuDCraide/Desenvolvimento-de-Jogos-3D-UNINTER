@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9097364643620520717}
   m_Layer: 0
   m_Name: Forklift
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 4.5, y: 6.33169, z: 8.428536}
   m_Center: {x: 0, y: 4.2316523, z: -2.1979005}
@@ -153,7 +153,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 7.334956, y: 0.8420487, z: 14.925006}
   m_Center: {x: -0.01234889, y: 0.85892755, z: 0.88548815}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 8914551976868758775}
   m_Layer: 0
   m_Name: Points
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 622252013674076124}
   m_Layer: 0
   m_Name: CenterOfMass
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 661513197119868754}
   m_Layer: 0
   m_Name: Follow Point
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3350337153213150448}
   m_Layer: 0
   m_Name: PickupPoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3697012210520842051}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.49, z: 5.37}
+  m_LocalPosition: {x: 0, y: 2.05, z: 5.37}
   m_LocalScale: {x: 3.3333333, y: 3.3333333, z: 3.3333333}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 2182976017276537661}
   m_Layer: 0
   m_Name: Lift
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4217876765101229532}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.62, z: 3.7546422}
+  m_LocalPosition: {x: 0, y: 3.1799998, z: 3.7546422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 2761635679381671855}
   m_Layer: 0
   m_Name: Wheel_L_Back
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,6 +528,8 @@ GameObject:
   - component: {fileID: 5498496748821974705}
   - component: {fileID: 2952346216994693825}
   - component: {fileID: 3666860984100235303}
+  - component: {fileID: 3600751629446199937}
+  - component: {fileID: 7239308220060283021}
   m_Layer: 0
   m_Name: CharacterForklift
   m_TagString: Player
@@ -652,6 +654,48 @@ MonoBehaviour:
     m_Bits: 0
   pickupRange: 5
   pickupForce: 150
+--- !u!65 &3600751629446199937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322798565977117159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.5, y: 6.33169, z: 8.428536}
+  m_Center: {x: 0, y: 4.2316523, z: -2.1979005}
+--- !u!65 &7239308220060283021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322798565977117159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.334956, y: 0.8420487, z: 14.925006}
+  m_Center: {x: -0.01234889, y: 0.85892755, z: 0.88548815}
 --- !u!1 &6206939699759092140
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +710,7 @@ GameObject:
   - component: {fileID: 8187336820838480321}
   m_Layer: 0
   m_Name: Wheel_R_Front
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,7 +830,7 @@ GameObject:
   - component: {fileID: 7008844134274188457}
   m_Layer: 0
   m_Name: DropOff Point
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,7 +864,7 @@ GameObject:
   - component: {fileID: 1762215735748704590}
   m_Layer: 0
   m_Name: Wheel_L_Front
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,7 +987,7 @@ GameObject:
   - component: {fileID: 4530884537977779391}
   m_Layer: 0
   m_Name: Wheel_R_Back
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,7 +1110,7 @@ GameObject:
   - component: {fileID: 191128619570281111}
   m_Layer: 0
   m_Name: Steering_Wheel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,6 +1365,10 @@ PrefabInstance:
     - target: {fileID: 1055270156583989330, guid: 5d626e90032c850449d3cc18b8dbc89e, type: 3}
       propertyPath: m_Name
       value: SKM_HazmatSuit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055270156583989330, guid: 5d626e90032c850449d3cc18b8dbc89e, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1137121429138394558, guid: 5d626e90032c850449d3cc18b8dbc89e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2171,6 +2219,10 @@ PrefabInstance:
     - target: {fileID: 731801658567534323, guid: a4db35aee5557ea4795ccca09a1bedc6, type: 3}
       propertyPath: m_Name
       value: Palett
+      objectReference: {fileID: 0}
+    - target: {fileID: 731801658567534323, guid: a4db35aee5557ea4795ccca09a1bedc6, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1235989380558620454, guid: a4db35aee5557ea4795ccca09a1bedc6, type: 3}
       propertyPath: m_Enabled

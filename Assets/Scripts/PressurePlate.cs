@@ -31,7 +31,6 @@ public class PressurePlate : MonoBehaviour, PressurePlateActivate {
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Activate trigg");
         Activate();
     }
 

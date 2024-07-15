@@ -19,7 +19,7 @@ public class OpenDoor : MonoBehaviour, PressurePlateActivate {
     }
 
     public void Activate() {
-        Debug.Log("Open Door");
+        //Debug.Log("Open Door");
         active = true;
         Rigidbody.isKinematic = false;
         Door.useMotor = true;

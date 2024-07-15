@@ -61,15 +61,24 @@ public class PickupController : MonoBehaviour {
         }
     }
 
+    
     void DropObject() {
-        heldObjRB.useGravity = true;
+        heldObjRB.useGravity = true;        
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;
-
+        
         heldObjRB.transform.parent = null;
         heldObj.transform.position = dropPosition.transform.position;
+        Debug.Log("DropObject " + heldObj.name);
         heldObj = null;
+        //Debug.Log("DropObject " + heldObj.name);
+    }
 
+    public void DropObjectOnImpact() {
+        //Debug.Log("DropObjectOnImpact");
+        if (heldObj != null) {
+            DropObject();
+        }
     }
 
     void MoveObject() {
