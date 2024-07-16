@@ -5,7 +5,8 @@ using System;
 public class AudioManager : MonoBehaviour {
 
     public static AudioManager instance;
-    public Sound bgMusic;
+    public Sound bgMenuMusic;
+    public Sound bgGameMusic;
 
     void Awake() {
         if (instance == null) {
@@ -17,12 +18,11 @@ public class AudioManager : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
-
     }
 
     void Start() {
-        bgMusic.InitializeSound();
-        Play(bgMusic);
+        bgMenuMusic.InitializeSound();
+        Play(bgMenuMusic);
     }
 
     public void Play(Sound s) {
@@ -30,5 +30,21 @@ public class AudioManager : MonoBehaviour {
             s.InitializeSound();
         }
         s.source.Play();
+    }
+
+    public void Stop(Sound s) {
+        s.source.Stop();
+    }
+
+    public void PlayGameMusic() {
+        Stop(bgMenuMusic);
+        bgGameMusic.InitializeSound();
+        Play(bgGameMusic);
+    }
+
+    public void PlayMenuMusic() {
+        Stop(bgGameMusic);
+        bgMenuMusic.InitializeSound();
+        Play(bgMenuMusic);
     }
 }

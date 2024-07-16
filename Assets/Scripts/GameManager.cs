@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour {
     public void EndLevel() {
         Debug.Log("END");
         SceneManager.LoadScene("End");
+        AudioManager.instance.PlayMenuMusic();
     }
 
 }

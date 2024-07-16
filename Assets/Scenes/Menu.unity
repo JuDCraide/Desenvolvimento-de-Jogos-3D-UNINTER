@@ -530,10 +530,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289ec54fad2d46f45a3ac8896a909a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgMusic:
-    clip: {fileID: 0}
-    loop: 0
-    volume: 0.5
+  bgMenuMusic:
+    clip: {fileID: 8300000, guid: 83742aea0e1c7574c99ccc001b096d3e, type: 3}
+    loop: 1
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
+  bgGameMusic:
+    clip: {fileID: 8300000, guid: 2a1c4f678e2e8cf4182b4dc03d994f09, type: 3}
+    loop: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
     mute: 0
