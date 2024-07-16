@@ -509,7 +509,7 @@ Transform:
   - {fileID: 8914551976868758775}
   - {fileID: 1552439392292835244}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1509377786217879877
 Rigidbody:
@@ -520,7 +520,7 @@ Rigidbody:
   m_GameObject: {fileID: 5322798565977117159}
   serializedVersion: 4
   m_Mass: 550
-  m_Drag: 0.5
+  m_Drag: 1
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -550,8 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80f5300191804345b83bf485070253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAcceleration: 80
-  brakeAcceleration: 120
+  maxAcceleration: 50
+  brakeAcceleration: 80
   turnSensitivity: 1
   maxSteerAngle: 30
   wheels:
