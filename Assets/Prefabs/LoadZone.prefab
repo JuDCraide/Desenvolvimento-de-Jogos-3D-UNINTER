@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 7523741624835834229}
   - component: {fileID: 112932462591185848}
   - component: {fileID: 3190278940894073789}
+  - component: {fileID: 2059509621245782747}
   m_Layer: 0
   m_Name: Sign_2 (1)
   m_TagString: Untagged
@@ -570,6 +571,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2059509621245782747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742771434877281693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e82de631df67bb4db1567c5845cdbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5975876751724012481
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +796,7 @@ GameObject:
   - component: {fileID: 7603919772502035552}
   - component: {fileID: 2126915023211690367}
   - component: {fileID: 1523817715533105365}
+  - component: {fileID: 3414021331225424199}
   m_Layer: 0
   m_Name: Sign_2
   m_TagString: Untagged
@@ -855,3 +869,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3414021331225424199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138546491525846567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e82de631df67bb4db1567c5845cdbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
