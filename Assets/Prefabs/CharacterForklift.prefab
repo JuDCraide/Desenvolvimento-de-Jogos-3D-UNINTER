@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAcceleration: 50
-  brakeAcceleration: 80
+  brakeAcceleration: 150
   turnSensitivity: 1
   maxSteerAngle: 30
   wheels:

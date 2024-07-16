@@ -15,6 +15,7 @@ Material:
   m_InvalidKeywords:
   - _EMISSION
   - _NORMALMAP
+  - _SHOW_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -79,13 +80,17 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _MainMetallicPower: 0
+    - _MainMetallicPower1: 0
     - _MainSmoothnessPower: 1
+    - _MainSmoothnessPower1: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OcclusionStrength1: 1
     - _OffsetFactor: -1
     - _OffsetUnit: -1
     - _Parallax: 0.02
+    - _Show: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
