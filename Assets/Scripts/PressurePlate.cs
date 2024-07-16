@@ -18,7 +18,7 @@ public class PressurePlate : MonoBehaviour, PressurePlateActivate {
         activationObject = go.GetComponent<PressurePlateActivate>();
     }
 
-    public void Activate() {        
+    public void Activate() {
         if (activationObject != null) {
             activationObject.Activate();
         }
