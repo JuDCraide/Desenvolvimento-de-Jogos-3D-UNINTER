@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 149040467428654964}
   - component: {fileID: 1572013702058865319}
   - component: {fileID: 1444068939571905317}
+  - component: {fileID: 8575798823606322552}
   m_Layer: 0
   m_Name: MetalBarrier_06_v2
   m_TagString: Untagged
@@ -130,3 +131,15 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0.022614196, y: 0.41864637, z: -0.06718305}
+--- !u!114 &8575798823606322552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806370008483339937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e82de631df67bb4db1567c5845cdbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
