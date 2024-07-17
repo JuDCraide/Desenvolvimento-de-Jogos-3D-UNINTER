@@ -570,6 +570,13 @@ MonoBehaviour:
   rb: {fileID: 1509377786217879877}
   animator: {fileID: 2952346216994693825}
   centerOfMass: {fileID: 622252013674076124}
+  crash:
+    clip: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
 --- !u!95 &2952346216994693825
 Animator:
   serializedVersion: 5
@@ -608,8 +615,29 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  pickupRange: 5
+  pickupRange: 10
   pickupForce: 150
+  pickUp:
+    clip: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
+  drop:
+    clip: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
+  dropOnImpact:
+    clip: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
 --- !u!65 &3600751629446199937
 BoxCollider:
   m_ObjectHideFlags: 0
