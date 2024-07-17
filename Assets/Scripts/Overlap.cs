@@ -18,6 +18,12 @@ public class Overlap : MonoBehaviour {
     public Image uiImage;
     public TMPro.TextMeshProUGUI quantityTest;
 
+    [SerializeField]
+    private Sound scored;
+
+    float extent = 1.6f;
+
+
     void Start() {
         //Use this to ensure that the Gizmos are being drawn when in Play Mode.
         m_Started = true;
@@ -29,10 +35,11 @@ public class Overlap : MonoBehaviour {
         MyCollisions();
     }
 
+
     void MyCollisions() {
         //Use the OverlapBox to detect if there are any other colliders within this box area.
         //Use the GameObject's centre, half the size (as a radius) and rotation. This creates an invisible box around your GameObject.
-        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity, m_LayerMask);
+        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2 * extent, Quaternion.identity, m_LayerMask);
 
         //Check when there is a new collider coming into contact with the box
         var quantity = 0;
@@ -44,6 +51,9 @@ public class Overlap : MonoBehaviour {
                 quantity++;
             }
         }
+        if (quantity > containObjectsQuantity) {
+            AudioManager.instance.Play(scored);
+        }
         containObjectsQuantity = quantity;
         quantityTest.SetText(containObjectsQuantity.ToString());
     }
@@ -54,6 +64,6 @@ public class Overlap : MonoBehaviour {
         //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
         if (m_Started)
             //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
-            Gizmos.DrawWireCube(transform.position, transform.localScale);
+            Gizmos.DrawWireCube(transform.position, transform.localScale * extent);
     }
 }

@@ -442,6 +442,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door: {fileID: 3171209868928590023}
   Rigidbody: {fileID: 8184108515789916612}
+  doorhinge:
+    clip: {fileID: 8300000, guid: fc473e79fff69c64b93c6e8824222a83, type: 3}
+    loop: 0
+    volume: 0.35
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
 --- !u!1 &3264838565598088568
 GameObject:
   m_ObjectHideFlags: 0

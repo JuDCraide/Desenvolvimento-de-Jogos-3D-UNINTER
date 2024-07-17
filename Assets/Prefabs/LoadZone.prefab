@@ -197,6 +197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 0}
   - {fileID: 2100000, guid: 9e4fbcd05a80a164ca59fd71463e5cdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -234,11 +235,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &562559179923946519
 GameObject:
@@ -688,7 +689,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4284774353611479935
 MonoBehaviour:
@@ -709,6 +710,13 @@ MonoBehaviour:
   pickableObject: {fileID: 940971592778989699, guid: b59bf6a163c105e4985405750426f447, type: 3}
   uiImage: {fileID: 4957068038160696006}
   quantityTest: {fileID: 1587509257460588331}
+  scored:
+    clip: {fileID: 8300000, guid: 433e56b91dc4e1a41a87d46c89b2cc97, type: 3}
+    loop: 0
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
 --- !u!1 &6180806010030511744
 GameObject:
   m_ObjectHideFlags: 0

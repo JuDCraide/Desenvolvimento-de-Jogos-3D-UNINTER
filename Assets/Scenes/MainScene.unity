@@ -10375,6 +10375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217395418350401140, guid: b8e72a7972933c64bbdcf6545e5e2c1b, type: 3}
+      propertyPath: doorhinge.volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7094244854113491819, guid: b8e72a7972933c64bbdcf6545e5e2c1b, type: 3}
       propertyPath: m_Name
       value: Door

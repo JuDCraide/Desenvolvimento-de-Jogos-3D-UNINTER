@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenDoor : MonoBehaviour, PressurePlateActivate {
@@ -7,6 +6,9 @@ public class OpenDoor : MonoBehaviour, PressurePlateActivate {
     public Rigidbody Rigidbody;
     JointMotor motor;
     bool active = false;
+
+    [SerializeField]
+    private Sound doorhinge;
 
     void Start() {
         Rigidbody = GetComponent<Rigidbody>();
@@ -20,19 +22,29 @@ public class OpenDoor : MonoBehaviour, PressurePlateActivate {
 
     public void Activate() {
         //Debug.Log("Open Door");
+        AudioManager.instance.Play(doorhinge);
         active = true;
         Rigidbody.isKinematic = false;
         Door.useMotor = true;
         Door.motor = motor;
+
+        StartCoroutine(waitToStopOpening());
+    }
+    
+    IEnumerator waitToStopOpening() {
+        yield return new WaitForSeconds(3);
+        AudioManager.instance.Stop(doorhinge);
     }
 
     IEnumerator waitToClose() {
         yield return new WaitForSeconds(5);
         if (active) yield break;
         Door.useSpring = true;
-        yield return new WaitForSeconds(2);
+        AudioManager.instance.Play(doorhinge);
+        yield return new WaitForSeconds(3);
         Rigidbody.isKinematic = true;
         Door.useSpring = false;
+        AudioManager.instance.Stop(doorhinge);
     }
 
     public void Deactivate() {
