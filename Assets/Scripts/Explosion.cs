@@ -12,14 +12,16 @@ public class Explosion : MonoBehaviour, PressurePlateActivate {
         foreach (Collider hit in colliders) {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
-            if (rb != null) {
-                rb.AddExplosionForce(pushForce, posicaoExplosao, radius, jumpExplosion);
-            }
             if (hit.tag == "Player") {
                 //Debug.Log("Player " + hit.gameObject.name);
+                rb.AddExplosionForce(pushForce * 20, posicaoExplosao, radius, jumpExplosion);
                 hit.GetComponent<PickupController>().DropObjectOnImpact();
             }
+            else if (rb != null) {
+                rb.AddExplosionForce(pushForce, posicaoExplosao, radius, jumpExplosion);
+            }
         }
+
         active = false;
     }
 
