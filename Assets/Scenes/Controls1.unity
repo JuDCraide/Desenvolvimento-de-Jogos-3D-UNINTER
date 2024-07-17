@@ -182,8 +182,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Left mouse button \u2192 to pick up object under the mouse cursor\nRight
-    mouse button \u2192 to drop objects\n"
+  m_text: 'Left mouse button to pick up object under the mouse cursor
+
+    Right
+    mouse button to drop objects
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -481,7 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9794cb6a0fd15c44db9545a2aeaa168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 0}
   videoName: pickup+mouseclick.mp4
 --- !u!1 &950607111
 GameObject:
@@ -616,9 +619,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "W or \u2191 arrow to speed up\nS or \u2193 arrow to reverse\r\nA or \u2190
-    arrow to turn left\r\nD or \u2192 arrow to turn right\r\nSpace key \u2192 to
-    brake\nR to restart level\nQ to end the game before \nthe time runs out\nNumeric
-    keypad (1 to 5) to switch between different cameras views"
+    arrow to turn left\r\nD or \u2192 arrow to turn right\r\nSpace key to brake\nR
+    to restart level\nQ to end the game before \nthe time runs out\nNumeric keypad
+    (1 to 5) to switch between different cameras views"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
