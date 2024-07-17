@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 281565444}
   - component: {fileID: 281565443}
   m_Layer: 5
-  m_Name: Credits (1)
+  m_Name: Controls2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -419.99988, y: -100.000015}
-  m_SizeDelta: {x: 640, y: 720}
+  m_AnchoredPosition: {x: -340, y: -49.999992}
+  m_SizeDelta: {x: 550, y: 620}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281565443
 MonoBehaviour:
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -4.3621826, y: 0, z: -0.103027344, w: 523.1126}
+  m_margin: {x: -4.3621826, y: 32.297363, z: -0.103027344, w: 411.6971}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 400705808}
   - component: {fileID: 400705807}
   m_Layer: 5
-  m_Name: HTP
+  m_Name: How to play title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 45}
+  m_AnchoredPosition: {x: 0, y: -26}
   m_SizeDelta: {x: 480, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &950607113
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 1020861340}
   - component: {fileID: 1020861339}
   m_Layer: 5
-  m_Name: Credits (2)
+  m_Name: Controls1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 420, y: -100.000015}
-  m_SizeDelta: {x: 640, y: 720}
+  m_AnchoredPosition: {x: 340, y: -49.999992}
+  m_SizeDelta: {x: 550, y: 620}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020861339
 MonoBehaviour:
@@ -602,8 +602,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "W or \u2191 arrow to speed up\nS or \u2193 arrow to reverse\r\nA or \u2190
     arrow to turn left\r\nD or \u2192 arrow to turn right\r\nSpace key \u2192 to
-    brake\nR to restart level\nQ to end the game before the  time runs out\nNumeric
-    keypad (1 to 5) to switch between different cameras"
+    brake\nR to restart level\nQ to end the game before \nthe time runs out\nNumeric
+    keypad (1 to 5) to switch between different cameras views"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -4.3621826, y: 0, z: -0.103027344, w: 102.48627}
+  m_margin: {x: -4.3621826, y: 0, z: -0.103027344, w: 1.1534729}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 1152114717}
   - component: {fileID: 1152114716}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,8 +1208,8 @@ RectTransform:
   m_Children:
   - {fileID: 1152114715}
   - {fileID: 400705806}
-  - {fileID: 281565442}
   - {fileID: 1020861338}
+  - {fileID: 281565442}
   - {fileID: 2010603476}
   - {fileID: 1909739977}
   m_Father: {fileID: 0}
@@ -1357,10 +1357,10 @@ RectTransform:
   m_Father: {fileID: 1867545060}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 548.79266, y: 30.400055}
-  m_SizeDelta: {x: -1097.5857, y: 60.799988}
+  m_AnchoredPosition: {x: -250, y: 30}
+  m_SizeDelta: {x: 500, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909739978
 MonoBehaviour:
@@ -1485,7 +1485,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010603475}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1494,10 +1494,10 @@ RectTransform:
   m_Father: {fileID: 1867545060}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 353, y: 96}
-  m_SizeDelta: {x: -1222, y: 70}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 300, y: 96}
+  m_SizeDelta: {x: 400, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010603477
 MonoBehaviour:
