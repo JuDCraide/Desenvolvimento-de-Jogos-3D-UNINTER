@@ -23,7 +23,6 @@ public class EndManager : MonoBehaviour {
             StaticResults.boxes1Count +
             StaticResults.boxes2Count +
             StaticResults.tiresCount;
-
         if (totalObjectsCollected <= 0) {
             message.SetText("\tThe task remains untouched amidst the debris. Without gathering any items, the road to recovery seems daunting. Gear up and strategize for the challenges ahead.");
         }
