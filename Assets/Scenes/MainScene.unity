@@ -16281,7 +16281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746684961}
   m_Layer: 0
-  m_Name: Pedras
+  m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20094,6 +20094,14 @@ PrefabInstance:
     - target: {fileID: 5498496748821974705, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
       propertyPath: crash.volume
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498496748821974705, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
+      propertyPath: smallCrash.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 34291068ff87f0049a4ca216ad514928, type: 3}
+    - target: {fileID: 5498496748821974705, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
+      propertyPath: smallCrash.volume
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7239308220060283021, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits

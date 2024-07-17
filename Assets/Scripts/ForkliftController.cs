@@ -38,6 +38,9 @@ public class CarController : MonoBehaviour {
     [SerializeField]
     private Sound crash;
 
+    [SerializeField]
+    private Sound smallCrash;
+
     void Start() {
         rb = GetComponent<Rigidbody>();
         animator.SetBool("IsMovingForward", false);
@@ -135,5 +138,9 @@ public class CarController : MonoBehaviour {
 
     public void PlayCrashSound() {
         AudioManager.instance.Play(crash);
+    }
+
+    public void PlaySmallCrashSound() {
+        AudioManager.instance.Play(smallCrash);
     }
 }
