@@ -28,6 +28,15 @@ public class GameManager : MonoBehaviour {
         TimeText.SetText(minutes.ToString("00") + ":" + seconds.ToString("00"));
     }
 
+    void Update() {
+        if (Input.GetKey(KeyCode.R)) {
+            Menus.restartScene();
+        }
+        if (Input.GetKey(KeyCode.Q)) {
+            EndLevel();
+        }
+    }
+
     void FixedUpdate() {
         StaticResults.barrelsCount = barrels.containObjectsQuantity;
         StaticResults.boxes1Count = boxes1.containObjectsQuantity;

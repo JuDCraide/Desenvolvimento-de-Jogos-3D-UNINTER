@@ -17,7 +17,7 @@ public class Menus : MonoBehaviour {
         }
     }
 
-    public void restartScene() {
+    public static void restartScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
