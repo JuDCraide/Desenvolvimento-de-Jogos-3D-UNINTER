@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
 
@@ -22,7 +23,11 @@ public class AudioManager : MonoBehaviour {
 
     void Start() {
         bgMenuMusic.InitializeSound();
-        Play(bgMenuMusic);
+        if (SceneManager.GetActiveScene().name == "MainScene") {
+            PlayGameMusic();
+        } else {
+            PlayMenuMusic();
+        }
     }
 
     public void Play(Sound s) {

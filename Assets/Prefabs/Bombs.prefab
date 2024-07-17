@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6271779894388627672}
   - component: {fileID: 1745666982206927718}
   - component: {fileID: 3338190658027867372}
-  - component: {fileID: 5935301663882092281}
+  - component: {fileID: 5571867578154198985}
   m_Layer: 0
-  m_Name: PressurePlateBUM
+  m_Name: Bombs
   m_TagString: PressurePlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 4170270267770579201}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &6271779894388627672
 MeshFilter:
@@ -105,9 +105,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 4.785322, z: 1}
+  m_Size: {x: 0.7, y: 4.785322, z: 0.9}
   m_Center: {x: -0, y: 1.1252682, z: 0}
---- !u!114 &5935301663882092281
+--- !u!114 &5571867578154198985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,10 +116,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 496378251748624271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f70440ad999f71458f679ac5b04e431, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e9a065a0b6ec664a8ad101380097372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 4170270267770221857}
+  jumpExplosion: 3
+  radius: 10
+  pushForce: 1000
+  explosionSound:
+    clip: {fileID: 8300000, guid: 9857f29f8e737564792162cdeaf77883, type: 3}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    mute: 0
 --- !u!1001 &4170270267770188677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,32 +204,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 100004, guid: a72885e93c1e4c5449d8f2a4888f2ed7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5679274492563949453}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72885e93c1e4c5449d8f2a4888f2ed7, type: 3}
---- !u!1 &4170270267770221857 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: a72885e93c1e4c5449d8f2a4888f2ed7, type: 3}
-  m_PrefabInstance: {fileID: 4170270267770188677}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5679274492563949453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4170270267770221857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e9a065a0b6ec664a8ad101380097372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpExplosion: 1
-  radius: 10
-  pushForce: 500
-  active: 0
 --- !u!4 &4170270267770579201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: a72885e93c1e4c5449d8f2a4888f2ed7, type: 3}
