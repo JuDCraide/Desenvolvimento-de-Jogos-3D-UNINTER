@@ -94,7 +94,7 @@ public class PickupController : MonoBehaviour {
 
             heldObjRB.transform.parent = null;
             heldObjRB.AddForce(transform.up * 600);
-            Debug.Log(RandomBoolValue());
+            //Debug.Log(RandomBoolValue());
             heldObjRB.AddTorque(heldObj.transform.forward * 3000 * RandomBoolValue());
             heldObj = null;
         }
