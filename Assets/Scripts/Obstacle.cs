@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour {
             var colGO = collision.gameObject;
             if (colGO.tag == "Player") {
                 colGO.GetComponent<PickupController>().DropObjectOnImpact();
+                colGO.GetComponent<CarController>().PlayCrashSound();
             }
         }
     }

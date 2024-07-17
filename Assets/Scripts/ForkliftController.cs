@@ -35,6 +35,9 @@ public class CarController : MonoBehaviour {
 
     public Transform centerOfMass;
 
+    [SerializeField]
+    private Sound crash;
+
     void Start() {
         rb = GetComponent<Rigidbody>();
         animator.SetBool("IsMovingForward", false);
@@ -128,5 +131,9 @@ public class CarController : MonoBehaviour {
             animator.SetBool("IsTurningLeft", false);
             animator.SetBool("IsTurningRight", true);
         }
+    }
+
+    public void PlayCrashSound() {
+        AudioManager.instance.Play(crash);
     }
 }

@@ -20071,9 +20071,25 @@ PrefabInstance:
       propertyPath: pickUp.volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3666860984100235303, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
+      propertyPath: dropOnImpact.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8baf7c6411b5cc84dbc67bf04a6d8907, type: 3}
+    - target: {fileID: 3666860984100235303, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
+      propertyPath: dropOnImpact.volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5322798565977117159, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
       propertyPath: m_Name
       value: CharacterForklift
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498496748821974705, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
+      propertyPath: crash.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 34291068ff87f0049a4ca216ad514928, type: 3}
+    - target: {fileID: 5498496748821974705, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
+      propertyPath: crash.volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7239308220060283021, guid: a35de17ad51eb4e4d9cffb0742efdc84, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits

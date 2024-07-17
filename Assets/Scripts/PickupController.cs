@@ -21,6 +21,8 @@ public class PickupController : MonoBehaviour {
     private Sound pickUp;
     [SerializeField]
     private Sound drop;
+    [SerializeField]
+    private Sound dropOnImpact;
 
     void Start() {
     }
@@ -88,6 +90,7 @@ public class PickupController : MonoBehaviour {
     public void DropObjectOnImpact() {
         //Debug.Log("DropObjectOnImpact");
         if (heldObj != null) {
+            AudioManager.instance.Play(dropOnImpact);
             heldObjRB.useGravity = true;
             heldObjRB.drag = 1;
             heldObjRB.constraints = RigidbodyConstraints.None;
