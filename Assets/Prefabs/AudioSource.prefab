@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7723083488994661592
 MonoBehaviour:
@@ -47,14 +47,14 @@ MonoBehaviour:
   bgMenuMusic:
     clip: {fileID: 8300000, guid: 83742aea0e1c7574c99ccc001b096d3e, type: 3}
     loop: 1
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     source: {fileID: 0}
     mute: 0
   bgGameMusic:
     clip: {fileID: 8300000, guid: 2a1c4f678e2e8cf4182b4dc03d994f09, type: 3}
     loop: 1
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     source: {fileID: 0}
     mute: 0

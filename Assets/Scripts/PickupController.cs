@@ -17,6 +17,11 @@ public class PickupController : MonoBehaviour {
     [SerializeField]
     private float pickupForce = 150.0f;
 
+    [SerializeField]
+    private Sound pickUp;
+    [SerializeField]
+    private Sound drop;
+
     void Start() {
     }
 
@@ -44,10 +49,12 @@ public class PickupController : MonoBehaviour {
     }
 
     void PickupObject(GameObject pickObj) {
-        if (pickObj.tag == "Player") {
+        if (pickObj.tag == "Player" || pickObj.tag == "Brick") {
             return;
         }
         if (pickObj.GetComponent<Rigidbody>()) {
+            AudioManager.instance.Play(pickUp);
+
             heldObjRB = pickObj.GetComponent<Rigidbody>();
             heldObjRB.transform.rotation = Quaternion.identity;
             heldObjRB.transform.forward = transform.forward;
@@ -63,6 +70,7 @@ public class PickupController : MonoBehaviour {
 
 
     void DropObject() {
+        AudioManager.instance.Play(drop);
         heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;
@@ -74,7 +82,7 @@ public class PickupController : MonoBehaviour {
 
     public float RandomBoolValue() {
         var i = Random.Range(-10, 11);
-        return i/10.0f;
+        return i / 10.0f;
     }
 
     public void DropObjectOnImpact() {
