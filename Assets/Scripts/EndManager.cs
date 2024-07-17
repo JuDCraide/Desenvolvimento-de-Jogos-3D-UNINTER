@@ -25,9 +25,9 @@ public class EndManager : MonoBehaviour {
             StaticResults.tiresCount;
 
         if (totalObjectsCollected <= 0) {
-            message.SetText("\tThe task remains untouched amidst the debris.Without gathering any items, the road to recovery seems daunting.Gear up and strategize for the challenges ahead.");
+            message.SetText("\tThe task remains untouched amidst the debris. Without gathering any items, the road to recovery seems daunting. Gear up and strategize for the challenges ahead.");
         }
-        if (totalObjectsCollected <= 5) {
+        else if (totalObjectsCollected <= 5) {
             message.SetText("\tYou've salvaged a few items amidst the wreckage. The path to restoration is long, but every piece counts. Prepare for tougher challenges ahead.");
         }
         else if (totalObjectsCollected <= 10) {
