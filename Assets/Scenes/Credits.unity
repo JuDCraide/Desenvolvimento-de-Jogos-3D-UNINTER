@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: -50}
-  m_SizeDelta: {x: 550, y: 620}
+  m_AnchoredPosition: {x: -330, y: -50}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265714110
 MonoBehaviour:
@@ -315,7 +315,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: credit
+  m_text: "https://freesound.org/people/cookies+policy/sounds/568369/\r\nhttps://freesound.org/people/cookies+policy/sounds/580833/
+    \r\nhttps://freesound.org/people/lwdickens/sounds/269010/\r\nhttps://freesound.org/people/sofi.om/sounds/428422/\r\nhttps://freesound.org/people/sleepskraper/sounds/491055/\r\nhttps://freesound.org/people/ash_rez/sounds/518888/
+    \r\nhttps://freesound.org/people/SamsterBirdies/sounds/580040/\r\nhttps://freesound.org/people/1bob/sounds/651515/\r\nhttps://freesound.org/people/JoMungus/sounds/718026/
+    \r\nhttps://freesound.org/people/PNMCarrieRailfan/sounds/682371/ \r\n\r\nhttps://pixabay.com/illustrations/forklift-vehicle-automobile-auto-6950625/\r\nhttps://www.pngwing.com/en/free-png-ykmcs\r\nhttps://www.canva.com\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -342,15 +345,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 5
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -378,7 +381,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.1036377, y: -1.8929443, z: -0.103027344, w: 133.29118}
+  m_margin: {x: 1.1036377, y: -1.8929443, z: -0.103027344, w: 126.05107}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -697,8 +700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 340, y: -50}
-  m_SizeDelta: {x: 550, y: 620}
+  m_AnchoredPosition: {x: 330, y: -50}
+  m_SizeDelta: {x: 590, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639237592
 MonoBehaviour:
@@ -720,7 +723,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: credir
+  m_text: "https://assetstore.unity.com/packages/3d/props/industrial/low-poly-forklift-176653\r\nhttps://assetstore.unity.com/packages/3d/environments/lowpoly-wasteland-props-138348\r\nhttps://assetstore.unity.com/packages/3d/environments/landscapes/polydesert-107196
+    \r\nhttps://assetstore.unity.com/packages/3d/props/exterior/low-poly-barriers-pack-free-201810
+    \r\nhttps://assetstore.unity.com/packages/3d/characters/easyroads3d-free-v3-987\r\nhttps://assetstore.unity.com/packages/3d/props/weapons/yughues-free-bombs-13147
+    \r\n\r\nhttps://craftpix.net/freebies/free-post-apocalyptic-pixel-art-game-backgrounds/\r\nhttps://craftpix.net/freebies/free-pixel-art-street-2d-backgrounds/\r\nhttps://craftpix.net/freebies/free-war-pixel-art-2d-backgrounds/\n\r\nhttps://www.cgtrader.com/free-3d-models/character/
+    other/hazmat-suit-character\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -747,15 +754,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 5
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -764,7 +771,7 @@ MonoBehaviour:
   m_paragraphSpacing: 30
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 0
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
