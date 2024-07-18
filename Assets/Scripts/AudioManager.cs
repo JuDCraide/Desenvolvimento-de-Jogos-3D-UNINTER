@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     void Start() {
+        bgGameMusic.InitializeSound();
         bgMenuMusic.InitializeSound();
         if (SceneManager.GetActiveScene().name == "MainScene") {
             PlayGameMusic();
@@ -43,13 +44,11 @@ public class AudioManager : MonoBehaviour {
 
     public void PlayGameMusic() {
         Stop(bgMenuMusic);
-        bgGameMusic.InitializeSound();
         Play(bgGameMusic);
     }
 
     public void PlayMenuMusic() {
         Stop(bgGameMusic);
-        bgMenuMusic.InitializeSound();
         Play(bgMenuMusic);
     }
 }
